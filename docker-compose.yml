@@ -1,0 +1,26 @@
+services:
+  pg_db:
+    image: postgres:18.6-alpine
+    restart: unless-stopped
+    container_name: pg_db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?POSTGRES_USER is required}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+    volumes:
+      - pg_data:/var/lib/postgresql/18/docker
+    ports:
+      - "5432:5432"
+  
+  nats:
+    image: nats:latest
+    restart: unless-stopped
+    container_name: nats-jetstream
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    volumes:
+      - nats_data:/data
+    command: ["-js", "-sd", "/data"]
+volumes:
+  pg_data:
+  nats_data:

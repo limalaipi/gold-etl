@@ -1,0 +1,22 @@
+[
+    {
+        "name": "ราคาทอง.today",
+        "owner": "สมาคมค้าทองคำแห่งประเทศไทย",
+        "url": "https://www.thaigoldtoday.com/api-docs",
+        "api": "https://www.thaigoldtoday.com/api/gold-price",
+        "catch": "60 วินาที"
+    },
+    {
+        "name": "Free Exchange Rate API, No Key Required",
+        "owner": "Yahoo Finance",
+        "url": "https://www.currencyexchangetool.com/api-docs",
+        "api": "https://www.currencyexchangetool.com/api/v1/convert?from=USD&to=THB",
+        "catch": "60 วินาที"
+    },
+    {
+        "name": "Binance PAXG/USDT API",
+        "owner": "Binance",
+        "url": "https://www.binance.com/en/trade/PAXG_USDT?type=spot",
+        "api": "https://www.binance.com/bapi/asset/v2/public/asset-service/product/get-product-by-symbol?symbol=PAXGUSDT"
+    }
+]   
